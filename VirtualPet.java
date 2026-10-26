@@ -6,14 +6,24 @@ public class VirtualPet {
 
       Scanner input = new Scanner(System.in);
 
-      int happiness = 5;
+      int happy = 5;
       int hunger = 5;
       int energy = 5;
       
       int choice = 0;
+      String petName;
+      
+      boolean end = false;
+      
+      
       
       System.out.println("Welcome to Virtual Pet Simulator!");
-      System.out.println("Your pet's name is Mr. Pickles.");
+      System.out.print("Name your pet: ");
+      petName = input.nextLine();
+      System.out.println("Your pet's name is " + petName + ".\n\n");
+      
+      
+      while(end == false) {
 
       // TODO 1:
       // Create a while loop that continues while:
@@ -21,11 +31,14 @@ public class VirtualPet {
       // hunger < 10
       // energy > 0
       // choice != 5
+         System.out.println("Health checkup:\nHappy: " + happy + "\nHunger: " + hunger + "\nEnergy: " + energy);
+      
+      
 
          // TODO 2:
          // Display happiness, hunger, and energy.
          
-         System.out.println("What would you like to do?");
+         System.out.println("\n\nWhat would you like to do?");
          System.out.println("1. Feed");
          System.out.println("2. Play");
          System.out.println("3. Sleep");
@@ -34,6 +47,19 @@ public class VirtualPet {
          
          choice = input.nextInt();
          
+         if (choice == 1) {System.out.println("Yummy!"); happy ++; hunger -= 3;}
+         else if (choice == 2) {System.out.println("Fun!"); happy += 3; hunger += 2; energy -= 2;}
+         else if (choice == 3) {System.out.println("eepy.."); happy --; hunger ++; energy += 3;}
+         else if (choice == 4) {System.out.println("Squeaky Clean!"); happy += 2; hunger ++; energy --;}
+         else if (choice == 5) {System.out.println("Bye!"); end = true;}
+         else if (choice == 0) {System.out.println("Your pet has no clue what this means and promptly explodes."); end = true;}
+         else {System.out.println("!error!");}
+         
+         System.out.print("\n\n");
+         
+         if (hunger > 9) {System.out.println("Monster!"); end = true;}
+         else if (energy < 1) {System.out.println("Monster!"); end = true;}
+         else if (happy > 14) {System.out.println("Winner!"); end = true;}
          // TODO 3:
          // Create an if / else if / else statement
          // to handle the player's choice.
@@ -51,7 +77,7 @@ public class VirtualPet {
       // Did it get too hungry?
       // Did it run out of energy?
       // Did the player quit?
-      //
+      }
       // Print the appropriate ending message.
       input.close();
    }
