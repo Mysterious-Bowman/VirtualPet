@@ -24,7 +24,7 @@ public class VirtualPet {
       
       
       while(end == false) {
-
+      System.out.print("\n\n\n\n\n\n");
       // TODO 1:
       // Create a while loop that continues while:
       // happiness < 15
@@ -51,15 +51,15 @@ public class VirtualPet {
          else if (choice == 2) {System.out.println("Fun!"); happy += 3; hunger += 2; energy -= 2;}
          else if (choice == 3) {System.out.println("eepy.."); happy --; hunger ++; energy += 3;}
          else if (choice == 4) {System.out.println("Squeaky Clean!"); happy += 2; hunger ++; energy --;}
-         else if (choice == 5) {System.out.println("Bye!"); end = true;}
+         else if (choice == 5) {System.out.println("Goodbye!"); end = true;}
          else if (choice == 0) {System.out.println("Your pet has no clue what this means and promptly explodes."); end = true;}
          else {System.out.println("!error!");}
          
          System.out.print("\n\n");
          
-         if (hunger > 9) {System.out.println("Monster!"); end = true;}
-         else if (energy < 1) {System.out.println("Monster!"); end = true;}
-         else if (happy > 14) {System.out.println("Winner!"); end = true;}
+         if (hunger > 9) {System.out.println("Your pet ran away looking for food!"); end = true;}
+         else if (energy < 1) {System.out.println(" Let's just say that your parents took your pet to a farm. The less you know the better."); end = true;}
+         else if (happy > 14) {System.out.println("YOU WIN!"); end = true;}
          // TODO 3:
          // Create an if / else if / else statement
          // to handle the player's choice.
