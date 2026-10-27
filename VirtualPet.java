@@ -57,9 +57,9 @@ public class VirtualPet {
          
          System.out.print("\n\n");
          
-         if (hunger > 9) {System.out.println("Your pet ran away looking for food!"); end = true;}
-         else if (energy < 1) {System.out.println(" Let's just say that your parents took your pet to a farm. The less you know the better."); end = true;}
-         else if (happy > 14) {System.out.println("YOU WIN!"); end = true;}
+         if (hunger > 9) {System.out.println("Monster! You let them starve.."); end = true;}
+         else if (energy < 1) {System.out.println("Monster! They no longer have the energy to continue.."); end = true;}
+         else if (happy > 14) {System.out.println("Winner! They left home due to happiness."); end = true;}
          // TODO 3:
          // Create an if / else if / else statement
          // to handle the player's choice.
